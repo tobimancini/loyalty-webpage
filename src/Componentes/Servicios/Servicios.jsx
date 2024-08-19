@@ -1,14 +1,14 @@
 import React from 'react'
 import Background from '../Background/Background'
 
-const Contacto = () => {
+const Servicios = () => {
   return (
     <Background>
       <div className='container regular'>
-        <h1>Contacto</h1>
+        <h1>Servicios</h1>
       </div>
     </Background>
   )
 }
 
-export default Contacto;
+export default Servicios

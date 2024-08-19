@@ -1,0 +1,322 @@
+.inicioContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroContainer.inicio {
+    background-image: url(../../../public/edificios.jpg);
+}
+
+.resumenContainer {
+    padding: 7%;
+}
+
+.resumenContainer h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.resumenContainer h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-style: normal;
+    color: #1f2d55;
+}
+
+.resumenContainer p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.resumenContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px;
+    background-color: #06060600;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    margin: 30px 0;
+    border: solid 1px #000;
+    cursor: pointer;
+}
+
+.resumenContainer button:hover {
+    background-color: #e4e4e4;
+}
+
+.resumenContainer.servicios {
+    /* background-color: #ffffff; */
+    background-image: url(../../../public/oficinaArriba.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.resumenContainer.servicios::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0b0f1db6;
+    z-index: 1;
+}
+
+.resumenContainer.servicios>* {
+    position: relative;
+    z-index: 2;
+}
+
+.resumenContainer.servicios h3 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.resumenContainer.servicios h2 {
+    color: #63bbea;
+    font-weight: 800;
+}
+
+.resumenContainer.servicios p {
+    color: #fff;
+    font-weight: 500;
+}
+
+.resumenContainer.servicios button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15 10px;
+    background-color: #0606069c;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    margin: 30px 0;
+    border: solid 1px #fff;
+    cursor: pointer;
+}
+
+.resumenContainer.servicios button:hover {
+    background-color: #282525ad;
+}
+
+.resumenContainer svg {
+    height: 70px;
+    color: #63bbea;
+}
+
+.resumenContainer p svg {
+    height: 16px;
+    margin-right: 10px;
+}
+
+.icons {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 45px 0;
+}
+
+.bannerContainer {
+    position: relative;
+    background-image: url(../../../public/bgBlue.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80px;
+}
+
+.alianzasContainer {
+    background-color: #08081c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 7%;
+}
+
+.alianzasContainer h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: #fff;
+    border: solid 1px #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px 0px;
+    margin: 0 0 50px 0;
+    align-self: flex-start;
+}
+
+.carouselContainer {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.brandContainer {
+    height: 100%;
+    min-width: 330px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo0 {
+    height: 70px;
+}
+
+.logo1 {
+    height: 120px;
+}
+
+.logo2 {
+    height: 55px;
+}
+
+.logo3 {
+    height: 60px;
+}
+
+.logo4 {
+    height: 50px;
+}
+
+.navBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logoList {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    animation-name: carouselSlider;
+    animation-delay: 2000ms;
+    animation-duration: 13000ms;
+    animation-iteration-count: infinite;
+}
+
+.inicioContactoContainer {
+    height: 400px;
+    background-color: #1f2d55;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.inicioContactoContainer .info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 550px;
+    padding-left: 7%;
+    z-index: 1;
+}
+
+.inicioContactoContainer .info h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-style: normal;
+    color: #fff;
+}
+
+.inicioContactoContainer .info p {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+.inicioContactoContainer .info button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #0606069c;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    width: 200px;
+    margin: 30px 0;
+    border: solid 1px #fff;
+    cursor: pointer;
+}
+
+.inicioContactoContainer .info button:hover {
+    background-color: #282525ad;
+}
+
+.inicioContactoContainer .logo {
+    position: relative;
+    height: 100%;
+    width: 100px;
+    z-index: 0;
+}
+
+.inicioContactoContainer .logo img {
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    height: 110%;
+}
+
+@keyframes carouselSlider{
+    0%{
+        transform: translateX(0px);
+    }
+    10%{
+        transform: translateX(0px);
+    }
+    90%{
+        transform: translateX(-1750px);
+    }
+    0%{
+        transform: translateX(0px);
+    }
+}

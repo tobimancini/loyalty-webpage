@@ -1,0 +1,105 @@
+/* .heroContainer.quienesSomos {
+    background-image: url(../../../public/edificioQuienes.jpg);
+} */
+
+.quienesContainer{
+    /* padding: 0 7%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quienesStaffContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 7%;
+    width: 100%;
+    margin-top: 80px;
+    background-color: #f0f0f0;
+}
+
+.staffContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.tarjetaContainer{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tarjetaContainer p{
+    align-self: flex-end !important;
+    text-decoration: underline;
+    font-style:oblique !important;
+}
+
+.tarjetaImg{
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+.tarjetaImg.gerente{
+    background-image: url(../../../public/mihura2.jpg);
+}
+
+.tarjetaImg.presidente{
+    background-image: url(../../../public/marcos2.jpg);
+}
+
+.quienesStaffContainer h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-style: normal;
+    color: #1f2d55;
+}
+
+.quienesStaffContainer p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+
+.quienesStaffContainer h3 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.quienesContainer svg{
+    height: 100px;
+    color: #63bbea;
+}
+
+.quienesContainer p svg {
+    height: 16px;
+    margin-right: 10px;
+}
+
+.quienesContainer .icons{
+    margin: 30px 0;
+}
+
+.quienesContainer p{
+    align-self: flex-start;
+}
