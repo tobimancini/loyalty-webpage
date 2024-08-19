@@ -62,9 +62,6 @@ const Inicio = () => {
           </div>
         </div>
 
-        {/* <div className='bannerContainer'>
-        </div> */}
-
         <div className='resumenContainer servicios'>
           <h3>ASESORAMIENTO, PROTECCION Y OPTIMIZACION</h3>
           <h2>Tu Futuro Financiero</h2>
@@ -78,9 +75,6 @@ const Inicio = () => {
             <FontAwesomeIcon icon={faCoins} />
           </div>
         </div>
-
-        {/* <div className='bannerContainer'>
-        </div> */}
 
         <div className='resumenContainer'>
           <h3>INDEPENDENCIA</h3>
