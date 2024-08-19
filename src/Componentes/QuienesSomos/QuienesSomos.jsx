@@ -9,8 +9,6 @@ const QuienesSomos = () => {
     <Background>
       <div className='container regular'>
         <div className='upperContainer'>
-          {/* <img src="./simbolo4.png" alt="logo" />
-          <h1>¿Quienes Somos?</h1> */}
           <h3>COMPROMISO</h3>
           <h2>¿Quienes Somos?</h2>
         </div>
@@ -18,8 +16,6 @@ const QuienesSomos = () => {
         <div className='quienesContainer'>
 
           <div className='quienesStaffContainer'>
-            {/* <h3>COMPROMISO</h3>
-            <h2>¿Quienes Somos?</h2> */}
             <div className='staffContainer'>
               <div className='tarjetaContainer'>
                 <div className='tarjetaImg presidente'></div>
@@ -50,7 +46,6 @@ const QuienesSomos = () => {
 
             <p className='quote'>"Loyalty nació de una idea clara: poner siempre al cliente en primer lugar." - Marcos Noceti, Presidente y Fundador.</p>
             <p className='quote'>"Creemos que las mejores estrategias nacen de relaciones de confianza genuinas que inspiren y transformen cada oportunidad en un logro compartido." - Nicolas Mihura, Gerente General.</p>
-
 
           </div>
 
