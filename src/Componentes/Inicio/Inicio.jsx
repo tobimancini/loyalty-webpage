@@ -1,14 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Background from '../Background/Background'
 import './Inicio.css';
+import video from '../../Assets/loyalty.MOV'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPeopleGroup, faShield, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPause, faPeopleGroup, faPlay, faShield, faVolumeMute, faVolumeUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 const Inicio = () => {
-
+  const videoRef = useRef(null);
   const [carouselPlay, setCarouselPlay] = useState(true);
+  const [videoPlay, setVideoPlay] = useState(true);
+  const [videoMute, setVideoMute] = useState(true);
+
+  const toggleVideoPlayback = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setVideoPlay(true);
+    } else {
+      videoRef.current.pause();
+      setVideoPlay(false);
+    }
+  };
 
   const logos = [
     './latin.png',
@@ -22,22 +35,40 @@ const Inicio = () => {
     <Background>
       <div className='container inicioContainer'>
 
-        <div className='heroContainer inicio'>
-          <span className='heroOverlay' />
+        {/* <div className='heroContainer inicio'> */}
+        <div className='heroContainer '>
+          {/* <span className='heroOverlay' /> */}
+          <video ref={videoRef} autoPlay={videoPlay} muted={videoMute} loop>
+            <source src={video} type="video/mp4" />
+          </video>
           <div className='heroTextContainer'>
             <h1>Loyalty Investments</h1>
             <p>Asesoramiento Financiero Independiente</p>
             <p>Protegiendo y gestionando tus activos con confianza, protección y credibilidad</p>
             <button>Contactanos</button>
           </div>
-          <img className='simbolo' src="./simbolo2.png" alt="logoLoyalty" />
+          <div className='videoBtns'>
+            {
+              videoPlay ?
+                <FontAwesomeIcon icon={faPause} onClick={toggleVideoPlayback}/>
+                :
+                <FontAwesomeIcon icon={faPlay} onClick={toggleVideoPlayback}/>
+            }
+            {
+              videoMute ?
+                <FontAwesomeIcon icon={faVolumeMute} onClick={()=>setVideoMute(!videoMute)}/>
+                :
+                <FontAwesomeIcon icon={faVolumeUp} onClick={()=>setVideoMute(!videoMute)}/>
+            }
+          </div>
+          {/* <img className='simbolo' src="./simbolo2.png" alt="logoLoyalty" /> */}
         </div>
 
         <div className='alianzasContainer'>
           <h2>Alianzas Estrategicas</h2>
           <div className='carouselContainer'>
             <div className="carousel">
-              <ul onMouseLeave={()=>setCarouselPlay(true)} onMouseEnter={()=>setCarouselPlay(false)} className="logoList" style={{animationPlayState: carouselPlay ? 'running' : 'paused' }} >
+              <ul onMouseLeave={() => setCarouselPlay(true)} onMouseEnter={() => setCarouselPlay(false)} className="logoList" style={{ animationPlayState: carouselPlay ? 'running' : 'paused' }} >
                 {logos.map((logo, index) => (
                   <li key={index} className="brandContainer">
                     <img className={`logo${index}`} src={logo} alt={`Logo ${index + 1}`} />
@@ -47,6 +78,12 @@ const Inicio = () => {
             </div>
           </div>
         </div>
+
+        {/* <div className='heroContainer'>
+          <video autoPlay muted loop>
+            <source src={video} type="video/mp4"/>
+          </video>
+        </div> */}
 
         <div className='resumenContainer'>
           <h3>TRAYECTORIA</h3>

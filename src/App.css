@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 7% 7%;
+  padding: 3% 7%;
 }
 
 .heroTextContainer h1 {
@@ -68,7 +68,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #0606069c;
+  background-color: #060606bc;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 500;

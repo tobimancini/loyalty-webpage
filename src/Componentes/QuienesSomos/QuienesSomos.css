@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 7%;
+    margin-bottom: 50px;
 }
 
 .quienesTextContainer {
@@ -11,11 +12,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 7%;
+    padding: 30px 0 30px 7%;
 }
 
 .quienesTextContainer .text {
-    font-size: 20px !important;
+    /* font-size: 20px !important; */
     margin-bottom: 30px;
 }
 
@@ -58,19 +59,19 @@
 
 .tarjetaImg {
     width: 100%;
-    height: 500px;
-    background-position: center;
+    height: 400px;
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 10px;
 }
 
 .tarjetaImg.gerente {
-    background-image: url(../../../public/mihura2.jpg);
+    background-image: url(../../../public/mihura.jpg);
 }
 
 .tarjetaImg.presidente {
-    background-image: url(../../../public/marcos2.jpg);
+    background-image: url(../../../public/marcos.jpg);
 }
 
 .quienesStaffContainer h2 {
@@ -102,17 +103,18 @@
 }
 
 .quienesContainer svg {
-    height: 100px;
+    height: 70px;
     color: #63bbea;
 }
 
 .quienesContainer p svg {
-    height: 16px;
+    height: 10px;
     margin-right: 10px;
 }
 
 .quienesContainer .icons {
     margin: 30px 0;
+    justify-content: space-around;
 }
 
 .quienesContainer p {
@@ -130,5 +132,5 @@
     font-optical-sizing: auto !important;
     font-weight: 600 !important;
     color: #1f2d55 !important;
-    font-size: 30px !important;
+    font-size: 22px !important;
 }

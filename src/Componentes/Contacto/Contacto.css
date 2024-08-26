@@ -1,0 +1,83 @@
+.contactInfo{
+    padding: 0px 7%;
+}
+
+.infoItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+    font-style: oblique;
+    color: rgb(62, 62, 62);
+}
+
+.infoItem svg{
+    margin-right: 10px;
+    color: #63bbea;
+}
+
+.formContainer{
+    padding: 50px 7%;
+    width: 100%;
+    margin: 50px 0;
+    background-image: url(../../../public/bgBlue.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.formContainer h3{
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+.formContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #0606069c;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    margin: 30px 0;
+    border: solid 1px #fff;
+    cursor: pointer;
+}
+
+.formContainer button:hover {
+    background-color: #282525ad;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.formGroup label{
+    color: #ffffff;
+}
+
+.formContainer input{
+    width: 300px;
+    padding: 10px 15px;
+}
+
+.formContainer textarea{
+    width: 600px;
+    padding: 10px 15px;
+
+}
+
+.mapContainer h3{
+    color: #1f2d55;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 7%;
+}

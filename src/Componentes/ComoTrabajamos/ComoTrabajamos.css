@@ -1,0 +1,23 @@
+.serviciosContainer.comoTrabajamos{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comoTrabajamosImg{
+    background-image: url(../../../public/trabajando.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 86%;
+    height: 400px;
+    margin: 0 7% 100px 7%;
+    position: relative;
+}
+
+.logoInImg{
+    height: auto;
+    width: 100px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}

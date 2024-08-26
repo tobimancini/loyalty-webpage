@@ -1,0 +1,43 @@
+.serviciosContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 7%;
+    margin-bottom: 50px;
+}
+
+.servicioContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.servicioContainer svg {
+    height: 70px;
+    color: #63bbea;
+}
+
+.servicioContainer p svg {
+    height: 10px;
+    margin-right: 10px;
+}
+
+
+.servicioContainer p{
+    margin-right: 150px;
+}
+
+.servicioContainer p span{
+    /* margin-bottom: 30px; */
+    color: #1f2d55;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.servicioContainer .text {
+    /* font-size: 20px !important; */
+    margin-bottom: 30px;
+}
