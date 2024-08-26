@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import Background from '../Background/Background'
 import './Inicio.css';
-import video from '../../Assets/loyalty.MOV'
+import video from '../../..public/loyalty.MOV'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPause, faPeopleGroup, faPlay, faShield, faVolumeMute, faVolumeUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 

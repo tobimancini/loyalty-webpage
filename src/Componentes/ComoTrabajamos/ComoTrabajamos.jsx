@@ -4,7 +4,7 @@ import '../Servicios/Servicios.css'
 import './ComoTrabajamos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
-import logo from '../../Assets/simbolo2.png'
+import logo from '../../../public/simbolo2.png'
 
 const ComoTrabajamos = () => {
   return (
