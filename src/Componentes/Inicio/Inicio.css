@@ -4,13 +4,9 @@
 }
 
 .heroContainer {
-    background-image: url(../../../public/bgBlue.jpg);
+    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
     /* background-repeat: repeat; */
     background-size: cover;
-}
-
-.heroContainer.inicio {
-    background-image: url(../../../public/edificios.jpg);
 }
 
 .heroContainer video {
@@ -94,7 +90,7 @@
 
 .resumenContainer.servicios {
     /* background-color: #ffffff; */
-    background-image: url(../../../public/oficinaArriba.jpg);
+    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/oficinaArriba.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -172,7 +168,7 @@
 
 .bannerContainer {
     position: relative;
-    background-image: url(../../../public/bgBlue.jpg);
+    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

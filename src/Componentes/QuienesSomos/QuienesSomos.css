@@ -35,7 +35,7 @@
     width: 100%;
     margin-top: 30px;
     padding: 0px 0px;
-    background-image: url(../../../public/bgBlue.jpg);
+    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
     background-size: 50px;
     background-repeat: repeat;
 }
@@ -67,11 +67,11 @@
 }
 
 .tarjetaImg.gerente {
-    background-image: url(../../../public/mihura.jpg);
+    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/mihura.jpg);
 }
 
 .tarjetaImg.presidente {
-    background-image: url(../../../public/marcos.jpg);
+    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/marcos.jpg);
 }
 
 .quienesStaffContainer h2 {

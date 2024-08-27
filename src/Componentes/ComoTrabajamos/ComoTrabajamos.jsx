@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Background from '../Background/Background'
 import '../Servicios/Servicios.css'
 import './ComoTrabajamos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
-// import logo from '../../../public/simbolo2.png'
+import { Link } from 'react-router-dom'
 
 const ComoTrabajamos = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Background>
       <div className='container regular'>
         <div className='upperContainer'>
           <h3>PROCESO</h3>
-          <h2>¿Como Trabajamos?</h2>
+          <h2>¿Cómo Trabajamos?</h2>
         </div>
 
         <div className='serviciosContainer comoTrabajamos'>
@@ -35,17 +40,17 @@ const ComoTrabajamos = () => {
         </div>
         
         <div className='comoTrabajamosImg'>
-          <img src={"../../../public/simbolo2.png"} alt="logo blanco" className='logoInImg' />
+          <img src={"https://loyaltyvideo.s3.us-east-2.amazonaws.com/simbolo2.png"} alt="logo blanco" className='logoInImg' />
         </div>
 
         <div className='inicioContactoContainer'>
           <div className='info'>
             <h2>Da el Primer Paso</h2>
             <p>Tu tranquilidad financiera empieza aquí. Permítenos ayudarte a proteger y crecer tu patrimonio con el respaldo de nuestros expertos.</p>
-            <button>Contactanos Ahora</button>
+            <Link to='/contacto'><button>Contactanos Ahora</button></Link>
           </div>
           <div className='logo'>
-            <img src="./simbolo3.png" alt="simbolo vertical" />
+            <img src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
           </div>
         </div>
 

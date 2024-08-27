@@ -1,41 +1,44 @@
 import React from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faEnvelopeSquare, faMailBulk, faMailForward, faMailReply } from '@fortawesome/free-solid-svg-icons'
-import { faInstagram, faLinkedin, faMailchimp } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
+  
   return (
     <footer className="footerContainer">
       <div className='footerTopContainer'>
 
         <div className='footerImg'>
-          <img src="./logoLetras.png" alt="logoFooter" />
+          <img src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/logoletras.png" alt="logoFooter" />
         </div>
 
         <div className="footerLinks">
           <h4>Explora</h4>
           <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/quienesSomos">¿Quiénes somos?</a></li>
-            <li><a href="/servicios">Servicios</a></li>
-            <li><a href="/comoTrabajamos">¿Como trabajamos?</a></li>
-            <li><a href="/contacto">Contacto</a></li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/quienesSomos">¿Quiénes somos?</Link></li>
+            <li><Link to="/servicios">Servicios</Link></li>
+            <li><Link to="/comoTrabajamos">¿Como trabajamos?</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
           </ul>
         </div>
 
         <div className="footerSocial">
           <h4>Síguenos</h4>
           <div className="socialIcons">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <Link to="https://www.instagram.com/loyalty.investments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            </Link>
+            <Link to="https://ar.linkedin.com/company/loyalty-investments" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <a href="mailto:info@tuempresa.com">
+            </Link>
+            <Link to="mailto:info@linv.com.ar">
               <FontAwesomeIcon icon={faEnvelopeSquare} />
-            </a>
+            </Link>
           </div>
         </div>
 

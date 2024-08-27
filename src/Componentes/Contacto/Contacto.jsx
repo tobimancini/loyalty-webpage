@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Background from '../Background/Background'
 import './Contacto.css'
 import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contacto = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <Background>
       <div className='upperContainer'>
-          <h3>INFORMACION</h3>
+          <h3>INFORMACIÓN</h3>
           <h2>Contactanos Ahora</h2>
         </div>
       <div className='contactInfo'>
@@ -18,8 +23,7 @@ const Contacto = () => {
         </div>
         <div className='infoItem'>
           <FontAwesomeIcon icon={faPhone} />
-          <p>011-3987-5923</p>
-          <p>+54 9 11 5144-061</p>
+          <p>11-3987-5923</p>
         </div>
         <div className='infoItem'>
           <FontAwesomeIcon icon={faEnvelope} />

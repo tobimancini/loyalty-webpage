@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import Background from '../Background/Background'
 import './Inicio.css';
-// import video from '../../..public/loyalty.MOV'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPause, faPeopleGroup, faPlay, faShield, faVolumeMute, faVolumeUp, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPause, faPeopleGroup, faPlay, faShield, faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Inicio = () => {
@@ -24,12 +24,16 @@ const Inicio = () => {
   };
 
   const logos = [
-    './latin.png',
-    './ieb.png',
-    './inviu.png',
-    './pershing.png',
-    './interactive.png'
+    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/latin.png',
+    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/ieb.png',
+    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/inviu.png',
+    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/pershing.png',
+    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/interactive.png'
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Background>
@@ -43,20 +47,20 @@ const Inicio = () => {
             <h1>Loyalty Investments</h1>
             <p>Asesoramiento Financiero Independiente</p>
             <p>Protegiendo y gestionando tus activos con confianza, protección y credibilidad</p>
-            <button>Contactanos</button>
+            <Link to='/contacto' ><button>Contactanos</button></Link>
           </div>
           <div className='videoBtns'>
             {
               videoPlay ?
-                <FontAwesomeIcon icon={faPause} onClick={toggleVideoPlayback}/>
+                <FontAwesomeIcon icon={faPause} onClick={toggleVideoPlayback} />
                 :
-                <FontAwesomeIcon icon={faPlay} onClick={toggleVideoPlayback}/>
+                <FontAwesomeIcon icon={faPlay} onClick={toggleVideoPlayback} />
             }
             {
               videoMute ?
-                <FontAwesomeIcon icon={faVolumeMute} onClick={()=>setVideoMute(!videoMute)}/>
+                <FontAwesomeIcon icon={faVolumeMute} onClick={() => setVideoMute(!videoMute)} />
                 :
-                <FontAwesomeIcon icon={faVolumeUp} onClick={()=>setVideoMute(!videoMute)}/>
+                <FontAwesomeIcon icon={faVolumeUp} onClick={() => setVideoMute(!videoMute)} />
             }
           </div>
         </div>
@@ -83,7 +87,7 @@ const Inicio = () => {
             especializado en banca privada y gestión de activos para individuos y empresas. Nuestro enfoque se basa en la confianza,
             la protección y la credibilidad.</p>
           <div className='icons'>
-            <button>Conoce más sobre nosotros</button>
+            <Link to='/quienesSomos'><button>Conoce más sobre nosotros</button></Link>
             <FontAwesomeIcon icon={faPeopleGroup} />
             <FontAwesomeIcon icon={faBusinessTime} />
             <FontAwesomeIcon icon={faHandshake} />
@@ -91,13 +95,13 @@ const Inicio = () => {
         </div>
 
         <div className='resumenContainer servicios'>
-          <h3>ASESORAMIENTO, PROTECCION Y OPTIMIZACION</h3>
+          <h3>ASESORAMIENTO, PROTECCIÓN Y OPTIMIZACIÓN</h3>
           <h2>Tu Futuro Financiero</h2>
           <p><FontAwesomeIcon icon={faDotCircle} />Ofrecemos asesoramiento financiero personalizado para ayudarte a alcanzar tus metas a largo plazo. Desde la planificación de inversiones hasta la estrategia de jubilación, estamos aquí para guiarte en cada paso.</p>
           <p><FontAwesomeIcon icon={faDotCircle} />Brindamos soluciones integrales para la gestión y protección del capital empresarial. Optimiza tus recursos, asegura tu flujo de caja y minimiza los riesgos financieros con nuestro apoyo experto.</p>
           <p><FontAwesomeIcon icon={faDotCircle} />Desarrollamos estrategias para la optimización fiscal que te permiten reducir tu carga impositiva y mejorar tu rentabilidad. Aprovecha al máximo tus recursos con nuestras soluciones a medida.</p>
           <div className='icons'>
-            <button>Conoce más sobre nuestros servicios</button>
+            <Link to='/servicios'><button>Conoce más sobre nuestros servicios</button></Link>
             <FontAwesomeIcon icon={faChartLine} />
             <FontAwesomeIcon icon={faShield} />
             <FontAwesomeIcon icon={faCoins} />
@@ -117,7 +121,7 @@ const Inicio = () => {
             <FontAwesomeIcon icon={faDotCircle} /> Alineamos nuestros objetivos con los tuyos, brindando un servicio personalizado y centrado en maximizar tus resultados financieros.
           </p>
           <div className='icons'>
-            <button>Descubre cómo trabajamos</button>
+            <Link to='/comoTrabajamos'><button>Descubre cómo trabajamos</button></Link>
             <FontAwesomeIcon icon={faHandshake} />
             <FontAwesomeIcon icon={faBalanceScale} />
             <FontAwesomeIcon icon={faGlobe} />
@@ -128,10 +132,10 @@ const Inicio = () => {
           <div className='info'>
             <h2>Da el Primer Paso</h2>
             <p>Tu tranquilidad financiera empieza aquí. Permítenos ayudarte a proteger y crecer tu patrimonio con el respaldo de nuestros expertos.</p>
-            <button>Contactanos Ahora</button>
+            <Link to='/contacto'><button>Contactanos Ahora</button></Link>
           </div>
           <div className='logo'>
-            <img src="./simbolo3.png" alt="simbolo vertical" />
+            <img src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
           </div>
         </div>
 
