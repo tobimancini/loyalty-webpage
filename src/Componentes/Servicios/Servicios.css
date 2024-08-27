@@ -1,4 +1,4 @@
-.serviciosContainer{
+.serviciosContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,7 +6,7 @@
     margin-bottom: 50px;
 }
 
-.servicioContainer{
+.servicioContainer {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -26,11 +26,11 @@
 }
 
 
-.servicioContainer p{
+.servicioContainer p {
     margin-right: 150px;
 }
 
-.servicioContainer p span{
+.servicioContainer p span {
     /* margin-bottom: 30px; */
     color: #1f2d55;
     font-size: 22px;
@@ -41,3 +41,20 @@
     /* font-size: 20px !important; */
     margin-bottom: 30px;
 }
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .serviciosContainer{
+        padding: 0 4%;
+    }
+    .servicioContainer .text{
+        margin-right: 70px;
+    }
+
+    .servicioContainer svg{
+        height: 60px;
+    }
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {}

@@ -21,3 +21,17 @@
     top: 15px;
     right: 15px;
 }
+
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .comoTrabajamosImg{
+        margin: 0 4% 70px 4%;
+    }
+    .comoTrabajamos{
+        margin-bottom: 20px;
+    }
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {}

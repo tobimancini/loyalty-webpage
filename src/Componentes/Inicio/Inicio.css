@@ -347,3 +347,36 @@
         transform: translateX(0px);
     }
 }
+
+
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .videoBtns{
+    right: 4%;
+  }
+
+  .alianzasContainer{
+    padding: 50px 4%;
+  }
+
+  .resumenContainer{
+    padding: 6% 4%;
+  }
+
+  .resumenContainer svg{
+    height: 60px;
+  }
+
+  .inicioContactoContainer{
+    height: 350px;
+  }
+
+  .inicioContactoContainer .info{
+    padding-left: 4%;
+  }
+
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {}

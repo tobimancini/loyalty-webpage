@@ -81,3 +81,22 @@
     font-weight: 600;
     padding: 20px 7%;
 }
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contactInfo{
+        padding: 0 4%;
+    }
+
+    .formContainer{
+        padding:  50px 4%;
+    }
+
+    .mapContainer h3{
+        padding: 20px 4%;
+    }
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {
+}

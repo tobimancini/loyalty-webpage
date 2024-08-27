@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0 30px 7%;
+    padding: 0px 0 30px 7%;
 }
 
 .quienesTextContainer .text {
@@ -33,7 +33,6 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 30px;
     padding: 0px 0px;
     background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
     background-size: 50px;
@@ -83,16 +82,6 @@
     color: #1f2d55;
 }
 
-/* 
-.quienesStaffContainer p {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(0, 0, 0);
-    margin-bottom: 10px;
-} */
-
 .quienesStaffContainer h3 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -133,4 +122,36 @@
     font-weight: 600 !important;
     color: #1f2d55 !important;
     font-size: 22px !important;
+}
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quienesContainer{
+        padding: 0 4%;
+    }
+
+    .staffContainer{
+        width: 315px;
+    }
+
+    .quienesTextContainer{
+        padding: 0px 0 30px 4%;
+    }
+
+    .quienesTextContainer .icons{
+        margin: 0;
+    }
+
+    .quienesTextContainer .icons svg{
+        height: 60px;
+    }
+
+    .quote{
+        font-size: 20px !important;
+    }
+
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {
 }
