@@ -1,45 +1,49 @@
 import React from 'react'
 import './Footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faEnvelopeSquare, faMailBulk, faMailForward, faMailReply } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram, faLinkedin, faMailchimp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
     <footer className="footerContainer">
+      <div className='footerTopContainer'>
+
+        <div className='footerImg'>
+          <img src="./logoLetras.png" alt="logoFooter" />
+        </div>
+
         <div className="footerLinks">
-          <h4>Links Rápidos</h4>
+          <h4>Explora</h4>
           <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/quienesSomos">¿Quiénes somos?</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+            <li><a href="/comoTrabajamos">¿Como trabajamos?</a></li>
+            <li><a href="/contacto">Contacto</a></li>
           </ul>
         </div>
 
         <div className="footerSocial">
           <h4>Síguenos</h4>
           <div className="socialIcons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} />
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedinIn} />
+              <FontAwesomeIcon icon={faLinkedin} />
             </a>
             <a href="mailto:info@tuempresa.com">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon icon={faEnvelopeSquare} />
             </a>
           </div>
         </div>
 
-        <div className="footerLegal">
-          <h4>Información Legal</h4>
-          <p><a href="#privacidad">Política de privacidad</a></p>
-          <p><a href="#terminos">Términos y condiciones</a></p>
-        </div>
-        <div className="footerCopy">
-          <p>&copy; {new Date().getFullYear()} Tu Empresa. Todos los derechos reservados.</p>
-        </div>
+      </div>
+
+      <div className="footerCopy">
+        <p>&copy; {new Date().getFullYear()} Loyalty Investments. Todos los derechos reservados.</p>
+      </div>
     </footer>
   )
 }

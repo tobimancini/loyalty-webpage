@@ -1,5 +1,86 @@
-.footerContainer{
+.footerContainer {
     background-color: #171620;
-    height: 400px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 7% 0 7%;
+    margin: 0 auto;
+}
+
+.footerTopContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footerImg, .footerLinks, .footerSocial{
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footerImg{
+    align-items: flex-start;
+}
+
+.footerImg img{
+    height: 40px;
+    margin-top: 10px;
+}
+
+.footerLinks h4,
+.footerSocial h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #787878;
+}
+
+.footerLinks{
+    align-items: center;
+}
+
+.footerLinks ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footerLinks ul li {
+    margin-bottom: 10px;
+}
+
+.footerLinks ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footerLinks ul li a:hover {
+    color: #63bbea;
+}
+
+.footerSocial{
+    align-items: flex-end;
+}
+
+.footerSocial .socialIcons a {
+    color: white;
+    margin-left: 10px ;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.footerSocial .socialIcons a:hover {
+    color: #63bbea;
+}
+
+.footerCopy {
+    text-align: center;
+    padding: 100px 0 40px 0;
+    font-size: 14px;
+    color: rgb(84, 84, 84);
 }

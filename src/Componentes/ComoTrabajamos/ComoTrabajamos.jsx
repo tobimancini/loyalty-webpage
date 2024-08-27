@@ -4,7 +4,7 @@ import '../Servicios/Servicios.css'
 import './ComoTrabajamos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDotCircle } from '@fortawesome/free-solid-svg-icons'
-import logo from '../../../public/simbolo2.png'
+// import logo from '../../../public/simbolo2.png'
 
 const ComoTrabajamos = () => {
   return (
@@ -35,7 +35,7 @@ const ComoTrabajamos = () => {
         </div>
         
         <div className='comoTrabajamosImg'>
-          <img src={logo} alt="logo blanco" className='logoInImg' />
+          <img src={"../../../public/simbolo2.png"} alt="logo blanco" className='logoInImg' />
         </div>
 
         <div className='inicioContactoContainer'>

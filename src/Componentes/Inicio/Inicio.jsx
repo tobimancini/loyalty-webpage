@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import Background from '../Background/Background'
 import './Inicio.css';
-import video from '../../..public/loyalty.MOV'
+// import video from '../../..public/loyalty.MOV'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPause, faPeopleGroup, faPlay, faShield, faVolumeMute, faVolumeUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -35,11 +35,9 @@ const Inicio = () => {
     <Background>
       <div className='container inicioContainer'>
 
-        {/* <div className='heroContainer inicio'> */}
         <div className='heroContainer '>
-          {/* <span className='heroOverlay' /> */}
           <video ref={videoRef} autoPlay={videoPlay} muted={videoMute} loop>
-            <source src={video} type="video/mp4" />
+            <source src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/loyalty.mp4" type="video/mp4" ></source>
           </video>
           <div className='heroTextContainer'>
             <h1>Loyalty Investments</h1>
@@ -61,7 +59,6 @@ const Inicio = () => {
                 <FontAwesomeIcon icon={faVolumeUp} onClick={()=>setVideoMute(!videoMute)}/>
             }
           </div>
-          {/* <img className='simbolo' src="./simbolo2.png" alt="logoLoyalty" /> */}
         </div>
 
         <div className='alianzasContainer'>
@@ -78,12 +75,6 @@ const Inicio = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className='heroContainer'>
-          <video autoPlay muted loop>
-            <source src={video} type="video/mp4"/>
-          </video>
-        </div> */}
 
         <div className='resumenContainer'>
           <h3>TRAYECTORIA</h3>
