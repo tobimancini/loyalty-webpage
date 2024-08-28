@@ -394,4 +394,17 @@
 }
 
 /*Estilos para celulares*/
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .videoBtns{
+        right: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .videoBtns svg{
+        width: 15px;
+        height: 15px;
+        margin: 0;
+    }
+}
