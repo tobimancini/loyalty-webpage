@@ -41,7 +41,7 @@ const Inicio = () => {
 
         <div className='heroContainer '>
           <video ref={videoRef} autoPlay={videoPlay} muted={videoMute} loop disablePictureInPicture playsInline>
-            <source src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/loyalty.mp4" type="video/mp4" ></source>
+            <source src="https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/loyalty.mp4" type="video/mp4" ></source>
           </video>
           <div className='heroTextContainer'>
             <h1>Loyalty Investments</h1>
