@@ -12,6 +12,10 @@ const Inicio = () => {
   const [carouselPlay, setCarouselPlay] = useState(true);
   const [videoPlay, setVideoPlay] = useState(true);
   const [videoMute, setVideoMute] = useState(true);
+  const [titleVisible, setTitleVisible] = useState(false)
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  
 
   const toggleVideoPlayback = () => {
     if (videoRef.current.paused) {
@@ -35,6 +39,34 @@ const Inicio = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    
+    if (video) {
+      const handleTimeUpdate = () => {
+        if (video.currentTime >= 4) {
+          setTitleVisible(true); 
+        }
+      };
+
+      video.addEventListener('timeupdate', handleTimeUpdate);
+
+      return () => {
+        video.removeEventListener('timeupdate', handleTimeUpdate);
+      };
+    }
+  }, []);
+
   return (
     <Background>
       <div className='container inicioContainer'>
@@ -44,7 +76,7 @@ const Inicio = () => {
             <source src="https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/loyalty.mp4" type="video/mp4" ></source>
           </video>
           <div className='heroTextContainer'>
-            <h1>Loyalty Investments</h1>
+            <h1 className={titleVisible && viewportWidth < 768 ? 'titleFadeIn' : ''} >Loyalty Investments</h1>
             <p>Asesoramiento Financiero Independiente</p>
             <p>Protegiendo y gestionando tus activos con confianza, protección y credibilidad</p>
             <Link to='/contacto' ><button>Contactanos</button></Link>

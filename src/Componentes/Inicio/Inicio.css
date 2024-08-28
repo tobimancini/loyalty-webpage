@@ -330,6 +330,21 @@
     height: 110%;
 }
 
+.titleFadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @keyframes carouselSlider {
     0% {
         transform: translateX(0px);
@@ -352,29 +367,29 @@
 
 /* Estilos para tabletas y laptops pequeños */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .videoBtns{
-    right: 4%;
-  }
+    .videoBtns {
+        right: 4%;
+    }
 
-  .alianzasContainer{
-    padding: 50px 4%;
-  }
+    .alianzasContainer {
+        padding: 50px 4%;
+    }
 
-  .resumenContainer{
-    padding: 6% 4%;
-  }
+    .resumenContainer {
+        padding: 6% 4%;
+    }
 
-  .resumenContainer svg{
-    height: 60px;
-  }
+    .resumenContainer svg {
+        height: 60px;
+    }
 
-  .inicioContactoContainer{
-    height: 350px;
-  }
+    .inicioContactoContainer {
+        height: 350px;
+    }
 
-  .inicioContactoContainer .info{
-    padding-left: 4%;
-  }
+    .inicioContactoContainer .info {
+        padding-left: 4%;
+    }
 
 }
 

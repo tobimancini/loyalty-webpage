@@ -151,31 +151,31 @@ a {
 
 /* Estilos para tabletas y laptops pequeños */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .heroTextContainer{
+  .heroTextContainer {
     padding: 3% 4%;
   }
 
-  .heroTextContainer h1{
+  .heroTextContainer h1 {
     font-size: 65px;
   }
 
-  .upperContainer{
+  .upperContainer {
     padding: 30px 4%;
   }
 }
 
 /*Estilos para celulares*/
 @media (max-width: 768px) {
-  .heroTextContainer{
+  .heroTextContainer {
     padding: 20% 10px;
-    background-color: #00000023;
   }
 
-  .heroTextContainer h1{
+  .heroTextContainer h1 {
     font-size: 50px;
+    opacity: 0;
   }
 
-  .heroTextContainer p{
+  .heroTextContainer p {
     font-size: 16px;
   }
 }
