@@ -165,4 +165,17 @@ a {
 }
 
 /*Estilos para celulares*/
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .heroTextContainer{
+    padding: 5% 10px;
+    background-color: #00000023;
+  }
+
+  .heroTextContainer h1{
+    font-size: 50px;
+  }
+
+  .heroTextContainer p{
+    font-size: 16px;
+  }
+}
