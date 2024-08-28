@@ -15,7 +15,7 @@ const Inicio = () => {
   const [titleVisible, setTitleVisible] = useState(false)
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
 
-  
+
 
   const toggleVideoPlayback = () => {
     if (videoRef.current.paused) {
@@ -51,11 +51,11 @@ const Inicio = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-    
+
     if (video) {
       const handleTimeUpdate = () => {
         if (video.currentTime >= 4) {
-          setTitleVisible(true); 
+          setTitleVisible(true);
         }
       };
 
@@ -118,11 +118,13 @@ const Inicio = () => {
           <p><FontAwesomeIcon icon={faDotCircle} />Con más de 20 años de experiencia, Loyalty ofrece asesoramiento financiero independiente,
             especializado en banca privada y gestión de activos para individuos y empresas. Nuestro enfoque se basa en la confianza,
             la protección y la credibilidad.</p>
-          <div className='icons'>
+          <div className='icons column'>
             <Link to='/quienesSomos'><button>Conoce más sobre nosotros</button></Link>
-            <FontAwesomeIcon icon={faPeopleGroup} />
-            <FontAwesomeIcon icon={faBusinessTime} />
-            <FontAwesomeIcon icon={faHandshake} />
+            <div className='icons'>
+              <FontAwesomeIcon icon={faPeopleGroup} />
+              <FontAwesomeIcon icon={faBusinessTime} />
+              <FontAwesomeIcon icon={faHandshake} />
+            </div>
           </div>
         </div>
 
@@ -132,12 +134,16 @@ const Inicio = () => {
           <p><FontAwesomeIcon icon={faDotCircle} />Ofrecemos asesoramiento financiero personalizado para ayudarte a alcanzar tus metas a largo plazo. Desde la planificación de inversiones hasta la estrategia de jubilación, estamos aquí para guiarte en cada paso.</p>
           <p><FontAwesomeIcon icon={faDotCircle} />Brindamos soluciones integrales para la gestión y protección del capital empresarial. Optimiza tus recursos, asegura tu flujo de caja y minimiza los riesgos financieros con nuestro apoyo experto.</p>
           <p><FontAwesomeIcon icon={faDotCircle} />Desarrollamos estrategias para la optimización fiscal que te permiten reducir tu carga impositiva y mejorar tu rentabilidad. Aprovecha al máximo tus recursos con nuestras soluciones a medida.</p>
-          <div className='icons'>
+
+          <div className='icons column'>
             <Link to='/servicios'><button>Conoce más sobre nuestros servicios</button></Link>
-            <FontAwesomeIcon icon={faChartLine} />
-            <FontAwesomeIcon icon={faShield} />
-            <FontAwesomeIcon icon={faCoins} />
+            <div className='icons'>
+              <FontAwesomeIcon icon={faChartLine} />
+              <FontAwesomeIcon icon={faShield} />
+              <FontAwesomeIcon icon={faCoins} />
+            </div>
           </div>
+
         </div>
 
         <div className='resumenContainer'>
@@ -152,12 +158,16 @@ const Inicio = () => {
           <p>
             <FontAwesomeIcon icon={faDotCircle} /> Alineamos nuestros objetivos con los tuyos, brindando un servicio personalizado y centrado en maximizar tus resultados financieros.
           </p>
-          <div className='icons'>
+
+          <div className='icons column'>
             <Link to='/comoTrabajamos'><button>Descubre cómo trabajamos</button></Link>
-            <FontAwesomeIcon icon={faHandshake} />
-            <FontAwesomeIcon icon={faBalanceScale} />
-            <FontAwesomeIcon icon={faGlobe} />
+            <div className='icons'>
+              <FontAwesomeIcon icon={faHandshake} />
+              <FontAwesomeIcon icon={faBalanceScale} />
+              <FontAwesomeIcon icon={faGlobe} />
+            </div>
           </div>
+
         </div>
 
         <div className='inicioContactoContainer'>
