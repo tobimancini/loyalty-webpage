@@ -4,7 +4,7 @@
 }
 
 .heroContainer {
-    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
+    background-image: url(https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/bgBlue.jpg);
     /* background-repeat: repeat; */
     background-size: cover;
 }
@@ -89,8 +89,7 @@
 }
 
 .resumenContainer.servicios {
-    /* background-color: #ffffff; */
-    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/oficinaArriba.jpg);
+    background-image: url(https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/oficinaArriba.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -168,7 +167,7 @@
 
 .bannerContainer {
     position: relative;
-    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
+    background-image: url(https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/bgBlue.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

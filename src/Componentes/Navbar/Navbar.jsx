@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <header className='headerContainer'>
       <Link to={"/"}>
-        <img className='headerLogo' src={'https://loyaltyvideo.s3.us-east-2.amazonaws.com/logoCompBlanco.png'} alt="logo" />
+        <img className='headerLogo' src={'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/logoCompBlanco.png'} alt="logo" />
       </Link>
         <NavbarLinks />
     </header>

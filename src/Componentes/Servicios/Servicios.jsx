@@ -54,7 +54,7 @@ const Servicios = () => {
             <Link to='/contacto'><button>Contactanos Ahora</button></Link>
           </div>
           <div className='logo'>
-            <img src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
+            <img src="https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
           </div>
         </div>
 

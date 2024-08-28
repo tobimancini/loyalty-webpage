@@ -34,7 +34,7 @@
     justify-content: space-between;
     width: 100%;
     padding: 0px 0px;
-    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/bgBlue.jpg);
+    background-image: url(https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/bgBlue.jpg);
     background-size: 50px;
     background-repeat: repeat;
 }
@@ -66,11 +66,11 @@
 }
 
 .tarjetaImg.gerente {
-    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/mihura.jpg);
+    background-image: url(https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/mihura.jpg);
 }
 
 .tarjetaImg.presidente {
-    background-image: url(https://loyaltyvideo.s3.us-east-2.amazonaws.com/marcos.jpg);
+    background-image: url(https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/marcos.jpg);
 }
 
 .quienesStaffContainer h2 {

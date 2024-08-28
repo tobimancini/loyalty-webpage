@@ -28,11 +28,11 @@ const Inicio = () => {
   };
 
   const logos = [
-    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/latin.png',
-    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/ieb.png',
-    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/inviu.png',
-    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/pershing.png',
-    'https://loyaltyvideo.s3.us-east-2.amazonaws.com/interactive.png'
+    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/latin.png',
+    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/ieb.png',
+    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/inviu.png',
+    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/pershing.png',
+    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/interactive.png'
   ];
 
   useEffect(() => {
@@ -177,7 +177,7 @@ const Inicio = () => {
             <Link to='/contacto'><button>Contactanos Ahora</button></Link>
           </div>
           <div className='logo'>
-            <img src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
+            <img src="https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
           </div>
         </div>
 
