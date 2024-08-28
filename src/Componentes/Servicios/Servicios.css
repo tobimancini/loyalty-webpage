@@ -57,4 +57,21 @@
 }
 
 /*Estilos para celulares*/
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .serviciosContainer{
+        padding: 0 10px;
+    }
+
+    .servicioContainer .text{
+        margin-right: 5px;
+    }
+
+    .servicioContainer svg{
+        height: 50px;
+    }
+
+    .servicioContainer p span{
+        font-size: 18px;
+    }
+}
+

@@ -84,3 +84,55 @@
     font-size: 14px;
     color: rgb(84, 84, 84);
 }
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contactInfo{
+        padding: 0 4%;
+    }
+
+    .formContainer{
+        padding:  50px 4%;
+    }
+
+    .mapContainer h3{
+        padding: 20px 4%;
+    }
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {
+    .contactInfo{
+        padding: 0 10px;
+    }
+
+    .contactInfo .infoItem p{
+        font-size: 14px;
+    }
+
+    .formContainer{
+        padding: 30px 10px;
+    }
+
+    .formContainer h3{
+        font-size: 18px;
+    }
+
+    .formContainer input{
+        padding: 7px 10px;
+        width: 100%;
+    }
+
+    .formContainer textarea{
+        width: 100%;
+    }
+
+    .formContainer button{
+        width: 100%;
+        padding: 7px 10px;
+    }
+
+    .mapContainer h3{
+        font-size: 18px;
+    }
+}

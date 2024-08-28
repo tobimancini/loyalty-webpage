@@ -42,7 +42,7 @@
     background-color: #0606069c;
     color: #fff;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     font-size: 16px;
     margin: 30px 0;
@@ -99,4 +99,37 @@
 
 /*Estilos para celulares*/
 @media (max-width: 768px) {
+    .contactInfo{
+        padding: 0 10px;
+    }
+
+    .contactInfo .infoItem p{
+        font-size: 14px;
+    }
+
+    .formContainer{
+        padding: 30px 10px;
+    }
+
+    .formContainer h3{
+        font-size: 18px;
+    }
+
+    .formContainer input{
+        padding: 7px 10px;
+        width: 100%;
+    }
+
+    .formContainer textarea{
+        width: 100%;
+    }
+
+    .formContainer button{
+        width: 100%;
+        padding: 7px 10px;
+    }
+
+    .mapContainer h3{
+        font-size: 18px;
+    }
 }

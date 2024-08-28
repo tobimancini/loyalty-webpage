@@ -126,27 +126,27 @@
 
 /* Estilos para tabletas y laptops pequeños */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .quienesContainer{
+    .quienesContainer {
         padding: 0 4%;
     }
 
-    .staffContainer{
+    .staffContainer {
         width: 315px;
     }
 
-    .quienesTextContainer{
+    .quienesTextContainer {
         padding: 0px 0 30px 4%;
     }
 
-    .quienesTextContainer .icons{
+    .quienesTextContainer .icons {
         margin: 0;
     }
 
-    .quienesTextContainer .icons svg{
+    .quienesTextContainer .icons svg {
         height: 60px;
     }
 
-    .quote{
+    .quote {
         font-size: 20px !important;
     }
 
@@ -154,4 +154,35 @@
 
 /*Estilos para celulares*/
 @media (max-width: 768px) {
+    .quienesContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+
+    .quienesTextContainer{
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+    .quienesTextContainer .icons{
+        padding: 0;
+    }
+
+    .quienesTextContainer .icons svg {
+        height: 50px;
+    }
+
+    .quienesTextContainer .quote{
+        font-size: 18px !important;
+    }
+
+    .quienesStaffContainer{
+        margin-bottom: 50px;
+    }
+
+
 }

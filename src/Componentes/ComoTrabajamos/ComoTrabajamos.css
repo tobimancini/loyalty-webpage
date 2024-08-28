@@ -34,4 +34,23 @@
 }
 
 /*Estilos para celulares*/
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .comoTrabajamosImg{
+        margin: 0;
+        height: 300px;
+        width: 100%;
+    }
+
+    .comoTrabajamosImg img{
+        width: 60px;
+    }
+
+    .comoTrabajamos{
+        flex-direction: column !important;
+    }
+
+    .comoTrabajamos .servicioContainer{
+        margin-bottom: 30px;
+    }
+
+}
