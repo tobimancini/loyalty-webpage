@@ -40,7 +40,7 @@ const Inicio = () => {
       <div className='container inicioContainer'>
 
         <div className='heroContainer '>
-          <video ref={videoRef} autoPlay={videoPlay} muted={videoMute} loop>
+          <video ref={videoRef} autoPlay={videoPlay} muted={videoMute} loop disablePictureInPicture>
             <source src="https://loyaltyvideo.s3.us-east-2.amazonaws.com/loyalty.mp4" type="video/mp4" ></source>
           </video>
           <div className='heroTextContainer'>
