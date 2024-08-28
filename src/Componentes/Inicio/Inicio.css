@@ -489,4 +489,8 @@
         width: 100%;
     }
 
+    .inicioContactoContainer .logo{
+        display: none;
+    }
+
 }
