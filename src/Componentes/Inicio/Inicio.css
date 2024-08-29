@@ -396,7 +396,6 @@
 @media (max-width: 768px) {
     .videoBtns{
         right: 10px;
-        left: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -404,7 +403,7 @@
     .videoBtns svg{
         width: 15px;
         height: 15px;
-        margin: 0;
+        margin: 0 0 0 15px;
     }
 
     .logo0 {

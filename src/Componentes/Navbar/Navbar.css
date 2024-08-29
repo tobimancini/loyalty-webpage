@@ -10,10 +10,10 @@
     align-items: center;
     background-color: #1f2d55;
     overflow: hidden;
-    z-index: 2;
+    z-index: 99;
 }
 
-.headerLogo{
+.headerLogo {
     height: 90%;
     width: 200px;
 }
@@ -39,11 +39,103 @@
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-      "wdth" 100;
+        "wdth" 100;
     letter-spacing: -0.5px;
     transition: all ease-in-out 50ms;
 }
 
-.navItem:hover{
+.navItem:hover {
     border-bottom: solid 3.5px #fff;
 }
+
+.hamburgerContainer{
+    height: 30px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line{
+    height: 2px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 3px 0;
+}
+
+.hamburgerBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarHamburger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 10px 20px 0;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 0 10px;
+    transform: translate3d(200px, 60px, 0);
+    background-color: #060606bc;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+.navbarHamburger .navItem{
+    margin: 10px 0;
+}
+
+.navbarHamburger .navItem:hover{
+    border: none;
+}
+
+@keyframes hamburger {
+    0% {
+        opacity: 0;
+        transform: translate3d(200px, 60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0px, 60px, 0);
+    }
+}
+
+@keyframes hamburgerOut {
+    0% {
+        opacity: 1;
+        transform: translate3d(0px, 60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(200px, 60px, 0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .navItem {
+        padding: 0 7px;
+        margin: 0 3px 0 3px;
+        font-size: 16px;
+    }
+}
+
+/* Estilos para tabletas y laptops pequeños */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+/*Estilos para celulares*/
+@media (max-width: 768px) {}
