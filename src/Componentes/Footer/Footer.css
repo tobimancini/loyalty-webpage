@@ -88,7 +88,11 @@
 }
 
 /* Estilos para tabletas y laptops pequeños */
-@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footerContainer{
+        padding: 30px 4% 0 4%;
+    }
+}
 
 /*Estilos para celulares*/
 @media (max-width: 768px) {

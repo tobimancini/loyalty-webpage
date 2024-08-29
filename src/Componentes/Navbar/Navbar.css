@@ -134,8 +134,14 @@
 
 /* Estilos para tabletas y laptops pequeños */
 @media (min-width: 769px) and (max-width: 1024px) {
-
+    .headerContainer{
+        padding: 0 4%;
+    }
 }
 
 /*Estilos para celulares*/
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .headerContainer{
+        padding: 0 10px;
+    }
+}
