@@ -2,9 +2,8 @@ import { useState } from "react";
 import HamburgerIcon from "./HamburgerIcon";
 import { Link } from "react-router-dom";
 
-const Hamburger = () => {
+const Hamburger = ({ navbarOn, setNavbarOn }) => {
 
-    const [navbarOn, setNavbarOn] = useState(false);
 
     const navbarStyle = navbarOn ? { animationName: "hamburger" } : { animationName: "hamburgerOut" };
 
