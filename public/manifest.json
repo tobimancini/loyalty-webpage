@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Loyalty Investments",
+  "name": "Somos una empresa de asesoramiento financiero independiente con una trayectoria de más de 20 años.",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./logoshow.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "./logoshow.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "./logoshow.png",
       "type": "image/png",
       "sizes": "512x512"
     }
