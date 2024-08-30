@@ -19,27 +19,25 @@ const Contacto = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    console.log(formData);
-
     try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+        const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
 
-      if (response.ok) {
-        alert('Correo enviado con éxito.');
-      } else {
-        alert('Hubo un error al enviar el correo.');
-      }
+        if (response.ok) {
+            alert('Correo enviado con éxito.');
+        } else {
+            alert('Hubo un error al enviar el correo.');
+        }
     } catch (error) {
-      console.error('Error enviando correo:', error);
+        console.error('Error enviando correo:', error);
     }
-  };
+};
+
 
   useEffect(() => {
     window.scrollTo(0, 0);

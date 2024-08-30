@@ -1,14 +1,13 @@
-// api/sendEmail.js
+// /api/sendEmail.js
 const nodemailer = require('nodemailer');
-require('dotenv').config();
 
-export const handler = async(req, res) =>{
+module.exports = async (req, res) => {
   if (req.method === 'POST') {
     const { name, email, subject, message } = req.body;
 
-    // Configura el transportador SMTP usando Nodemailer
+    // Configuración del transporte SMTP usando Nodemailer
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // Cambia esto si usas otro servicio de correo
+      service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER, // Email de envío
         pass: process.env.EMAIL_PASS, // Contraseña de la aplicación (no la normal de tu correo)
@@ -32,4 +31,5 @@ export const handler = async(req, res) =>{
     res.setHeader('Allow', ['POST']);
     res.status(405).end(`Método ${req.method} no permitido`);
   }
-}
+};
+
