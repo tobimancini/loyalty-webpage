@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HamburgerIcon from "./HamburgerIcon";
 import { Link } from "react-router-dom";
 
