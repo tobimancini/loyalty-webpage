@@ -1,10 +1,45 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Background from '../Background/Background'
 import './Contacto.css'
 import { faEnvelope, faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Contacto = () => {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    console.log(formData);
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Correo enviado con éxito.');
+      } else {
+        alert('Hubo un error al enviar el correo.');
+      }
+    } catch (error) {
+      console.error('Error enviando correo:', error);
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,25 +68,25 @@ const Contacto = () => {
 
       <div className='formContainer'>
         <h3>Envíanos un mensaje</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className='formGroup'>
             <label htmlFor='name'>Nombre</label>
-            <input type='text' id='name' name='name' required />
+            <input type='text' id='name' name='name' required value={formData.name} onChange={handleChange} />
           </div>
 
           <div className='formGroup'>
             <label htmlFor='email'>Correo Electrónico</label>
-            <input type='email' id='email' name='email' required />
+            <input type='email' id='email' name='email' required value={formData.email} onChange={handleChange} />
           </div>
 
           <div className='formGroup'>
             <label htmlFor='subject'>Asunto</label>
-            <input type='text' id='subject' name='subject' required />
+            <input type='text' id='subject' name='subject' required value={formData.subject} onChange={handleChange} />
           </div>
 
           <div className='formGroup'>
             <label htmlFor='message'>Mensaje</label>
-            <textarea id='message' name='message' rows='5' required></textarea>
+            <textarea id='message' name='message' rows='5' required value={formData.message} onChange={handleChange}></textarea>
           </div>
 
           <button type='submit'>Contacta con nosotros</button>
