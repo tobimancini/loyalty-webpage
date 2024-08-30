@@ -8,7 +8,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 const Contacto = () => {
 
   const whatsappNumber = '541139875923'; // Número de teléfono en formato internacional
-  const whatsappMessage = 'Hola, me gustaría obtener más información sobre su producto';
+  const whatsappMessage = 'Hola, me gustaría hacer una consulta...';
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   useEffect(() => {
