@@ -1,5 +1,6 @@
 // api/sendEmail.js
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 export const handler = async(req, res) =>{
   if (req.method === 'POST') {
