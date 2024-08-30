@@ -50,6 +50,11 @@
     cursor: pointer;
 }
 
+.formContainer button svg{
+    height: 25px;
+    margin-left: 15px;
+}
+
 .formContainer button:hover {
     background-color: #282525ad;
 }
