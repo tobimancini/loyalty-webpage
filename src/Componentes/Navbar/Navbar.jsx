@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <header className='headerContainer' style={{overflow: !navbarOn? 'hidden' : 'initial'}}>
       <Link to={"/"}>
-        <img className='headerLogo' src={'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/logoCompBlanco.png'} alt="logo" />
+        <img className='headerLogo' src={'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/logoCompBlanco.png'} alt="logo" />
       </Link>
       {
         isDesktopWidth ?

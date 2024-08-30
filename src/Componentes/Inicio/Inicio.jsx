@@ -28,11 +28,11 @@ const Inicio = () => {
   };
 
   const logos = [
-    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/latin.png',
-    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/ieb.png',
-    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/inviu.png',
-    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/pershing.png',
-    'https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/interactive.png'
+    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/latin.png',
+    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/ieb.png',
+    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/inviu.png',
+    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/pershing.png',
+    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/interactive.png'
   ];
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const Inicio = () => {
 
         <div className='heroContainer '>
           <video ref={videoRef} autoPlay muted={videoMute} loop disablePictureInPicture playsInline>
-            <source src="https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/loyalty.mp4" type="video/mp4" ></source>
+            <source src="https://loyalty-optimized.s3.sa-east-1.amazonaws.com/LoyaltyOpt.mp4" type="video/mp4" ></source>
           </video>
           <div className='heroTextContainer'>
             <h1 className={titleVisible && viewportWidth < 768 ? 'titleFadeIn' : ''} >Loyalty Investments</h1>
@@ -177,7 +177,7 @@ const Inicio = () => {
             <Link to='/contacto'><button>Contactanos Ahora</button></Link>
           </div>
           <div className='logo'>
-            <img src="https://loyaltyinvestments-tobi.s3.sa-east-1.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
+            <img src="https://loyalty-optimized.s3.sa-east-1.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
           </div>
         </div>
 
