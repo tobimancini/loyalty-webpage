@@ -26,7 +26,7 @@
   max-width: 900px;
 }
 
-.home-hero__label {
+.home-hero .home-hero__label {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: clamp(11px, 1.2vw, 14px);
