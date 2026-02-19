@@ -1,14 +1,18 @@
-import './Navbar.css'
+import './Navbar.css';
 
-const HamburgerIcon = ({ toggleHamburger }) => {
-
-    return(
-        <div className="hamburgerContainer" onClick={toggleHamburger}>
-            <span className="line first" />
-            <span className="line second" />
-            <span className="line third" />
-        </div>
-    )
-}
+const HamburgerIcon = ({ isOpen, toggle }) => {
+  return (
+    <button
+      className={`hamburger-btn ${isOpen ? 'hamburger-btn--open' : ''}`}
+      onClick={toggle}
+      aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+      aria-expanded={isOpen}
+    >
+      <span className="hamburger-line" />
+      <span className="hamburger-line" />
+      <span className="hamburger-line" />
+    </button>
+  );
+};
 
 export default HamburgerIcon;

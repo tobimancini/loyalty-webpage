@@ -1,494 +1,242 @@
+/* ========================================
+   INICIO CONTAINER
+   ======================================== */
 .inicioContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.heroContainer {
-    background-image: url(https://loyalty-optimized.s3.sa-east-1.amazonaws.com/bgBlue.jpg);
-    /* background-repeat: repeat; */
-    background-size: cover;
+/* ========================================
+   HOME HERO — Typographic Statement
+   ======================================== */
+.home-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #080d1e 0%, var(--color-primary) 50%, #0a1028 100%);
+  padding: var(--space-4xl) var(--section-px);
+  overflow: hidden;
 }
 
-.heroContainer video {
-    height: 100%;
+.home-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
 }
 
-.videoBtns {
-    position: absolute;
-    bottom: 50px;
-    right: 7%;
-    z-index: 99;
+.home-hero__label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(11px, 1.2vw, 14px);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  display: block;
+  margin-bottom: var(--space-lg);
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 0.3s forwards;
 }
 
-.videoBtns svg {
-    background-color: #00000098;
-    color: #fff;
-    margin: 10px;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    cursor: pointer;
-    transition: all ease-in-out 100ms;
-    border: solid 1px #fff;
+.home-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 8vw, 100px);
+  font-weight: 400;
+  color: var(--color-text-inverse);
+  line-height: 1.05;
+  margin-bottom: var(--space-xl);
+  opacity: 0;
+  animation: heroFadeUp 1s var(--ease-out) 0.6s forwards;
 }
 
-.videoBtns svg:hover {
-    background-color: #000;
+.home-hero__btn {
+  opacity: 0;
+  animation: heroFadeUp 0.8s var(--ease-out) 1s forwards;
+  width: fit-content;
 }
 
-
-.resumenContainer {
-    padding: 7%;
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.4);
+  animation: scrollBounce 2s ease-in-out infinite;
+  font-size: 14px;
 }
 
-.resumenContainer h3 {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    margin-bottom: 15px;
+/* ========================================
+   PHILOSOPHY SECTION
+   ======================================== */
+.philosophy-section {
+  background-color: var(--color-bg);
 }
 
-.resumenContainer h2 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-style: normal;
-    color: #1f2d55;
+/* ========================================
+   HOME SERVICES PREVIEW
+   ======================================== */
+.home-services {
+  background-color: var(--color-bg-alt);
 }
 
-.resumenContainer p {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(0, 0, 0);
-    margin-bottom: 10px;
+.home-services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  padding: 0 var(--section-px) var(--space-2xl);
 }
 
-.resumenContainer button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 22px;
-    background-color: #06060600;
-    color: #000;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    margin: 30px 0;
-    border: solid 1px #000;
-    cursor: pointer;
+.home-services .service-card {
+  background-color: var(--color-text-inverse);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
-.resumenContainer button:hover {
-    background-color: #e4e4e4;
+.home-services .service-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
-.resumenContainer.servicios {
-    background-image: url(https://loyalty-optimized.s3.sa-east-1.amazonaws.com/oficinaArriba.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+.home-services .service-card .icon-circle {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
 }
 
-.resumenContainer.servicios::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0b0f1db6;
-    z-index: 1;
+.home-services .service-card .icon-circle svg {
+  width: 24px;
+  height: 24px;
 }
 
-.resumenContainer.servicios>* {
-    position: relative;
-    z-index: 2;
+.home-services .service-card__title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
 }
 
-.resumenContainer.servicios h3 {
-    color: #fff;
-    font-weight: 400;
+.home-services .service-card__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-light);
+  line-height: 1.6;
 }
 
-.resumenContainer.servicios h2 {
-    color: #63bbea;
-    font-weight: 800;
+.home-services__link-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-lg) var(--section-px) var(--section-py);
 }
 
-.resumenContainer.servicios p {
-    color: #fff;
-    font-weight: 400;
+/* ========================================
+   ALIANZAS / CAROUSEL
+   ======================================== */
+.alianzas-section {
+  background-color: var(--color-surface-dark);
+  padding: var(--space-3xl) var(--section-px);
+  overflow: hidden;
 }
 
-.resumenContainer.servicios button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15 10px;
-    background-color: #0606069c;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    margin: 30px 0;
-    border: solid 1px #fff;
-    cursor: pointer;
+.alianzas-section .section-label {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-2xl);
+  display: block;
 }
 
-.resumenContainer.servicios button:hover {
-    background-color: #282525ad;
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-.resumenContainer svg {
-    height: 70px;
-    color: #63bbea;
+.carousel-track {
+  display: flex;
+  animation: carouselScroll 25s linear infinite;
+  width: fit-content;
 }
 
-.resumenContainer p svg {
-    height: 10px;
-    margin-right: 10px;
+.carousel-item {
+  flex-shrink: 0;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-2xl);
 }
 
-.icons {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    padding: 45px 0;
+.carousel-item img {
+  filter: brightness(0) invert(1);
+  opacity: 0.5;
+  transition: opacity var(--duration-normal) var(--ease-out);
+  max-width: 100%;
 }
 
-.bannerContainer {
-    position: relative;
-    background-image: url(https://loyalty-optimized.s3.sa-east-1.amazonaws.com/bgBlue.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80px;
+.carousel-item img:hover {
+  opacity: 0.9;
 }
 
-.alianzasContainer {
-    background-color: #08081c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 7%;
-    z-index: 50;
+@keyframes carouselScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.alianzasContainer h2 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #fff;
-    padding: 10px 0px;
-    margin: 0 0 50px 0;
-    align-self: flex-start;
-}
-
-.carouselContainer {
-    height: 140px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-}
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-}
-
-.brandContainer {
-    height: 100%;
-    min-width: 330px;
-    margin-right: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo0 {
-    height: 70px;
-}
-
-.logo1 {
-    height: 120px;
-}
-
-.logo2 {
-    height: 55px;
-}
-
-.logo3 {
-    height: 60px;
-}
-
-.logo4 {
-    height: 50px;
-}
-
-.navBtn {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.logoList {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    animation-name: carouselSlider;
-    animation-delay: 2000ms;
-    animation-duration: 13000ms;
-    animation-iteration-count: infinite;
-}
-
-.inicioContactoContainer {
-    height: 400px;
-    background-color: #1f2d55;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.inicioContactoContainer .info {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 550px;
-    padding-left: 7%;
-    z-index: 1;
-}
-
-.inicioContactoContainer .info h2 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-style: normal;
-    color: #fff;
-}
-
-.inicioContactoContainer .info p {
-    font-size: 18px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color: rgb(255, 255, 255);
-}
-
-.inicioContactoContainer .info button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #0606069c;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    width: 200px;
-    margin: 30px 0;
-    border: solid 1px #fff;
-    cursor: pointer;
-}
-
-.inicioContactoContainer .info button:hover {
-    background-color: #282525ad;
-}
-
-.inicioContactoContainer .logo {
-    position: relative;
-    height: 100%;
-    width: 100px;
-    z-index: 0;
-}
-
-.inicioContactoContainer .logo img {
-    position: absolute;
-    top: -5%;
-    right: -5%;
-    height: 110%;
-}
-
-.titleFadeIn {
-    opacity: 0;
-    animation: fadeIn 0.8s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes carouselSlider {
-    0% {
-        transform: translateX(0px);
-    }
-
-    10% {
-        transform: translateX(0px);
-    }
-
-    90% {
-        transform: translateX(-1750px);
-    }
-
-    0% {
-        transform: translateX(0px);
-    }
-}
-
-
-
-/* Estilos para tabletas y laptops pequeños */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .videoBtns {
-        right: 4%;
-    }
-
-    .alianzasContainer {
-        padding: 50px 4%;
-    }
-
-    .resumenContainer {
-        padding: 6% 4%;
-    }
-
-    .resumenContainer svg {
-        height: 60px;
-    }
-
-    .inicioContactoContainer {
-        height: 350px;
-    }
-
-    .inicioContactoContainer .info {
-        padding-left: 4%;
-    }
-
-}
-
-/*Estilos para celulares*/
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-    .videoBtns{
-        right: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .videoBtns svg{
-        width: 15px;
-        height: 15px;
-        margin: 0 0 0 15px;
-    }
+  .home-hero {
+    min-height: 85vh;
+    padding: var(--space-3xl) var(--section-px);
+  }
 
-    .logo0 {
-        height: 50px;
-    }
-    
-    .logo1 {
-        height: 90px;
-    }
-    
-    .logo2 {
-        height: 48px;
-    }
-    
-    .logo3 {
-        height: 48px;
-    }
-    
-    .logo4 {
-        height: 42px;
-    }
+  .home-hero__title {
+    font-size: clamp(36px, 10vw, 56px);
+  }
 
-    .alianzasContainer {
-        padding: 50px 10px;
-    }
+  .home-hero__btn {
+    width: fit-content;
+  }
 
-    .resumenContainer {
-        padding: 60px 10px;
-    }
+  .scroll-indicator {
+    display: none;
+  }
 
-    .resumenContainer h3{
-        font-size: 16px;
-    }
+  .home-services .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
 
-    .resumenContainer h2{
-        font-size: 30px;
-    }
+  .home-services .service-card {
+    padding: var(--space-lg);
+  }
 
-    .icons.column{
-        display: flex;
-        flex-direction: column-reverse;
-    }
+  .alianzas-section {
+    padding: var(--space-2xl) var(--space-md);
+  }
 
-    .icons{
-        padding: 10px;
-    }
+  .carousel-item {
+    width: 180px;
+    padding: 0 var(--space-lg);
+  }
 
-    .resumenContainer a{
-        width: 100%;
-    }
-
-    .resumenContainer button{
-        width: 100%;
-    }
-
-    .resumenContainer svg {
-        height: 40px;
-    }
-
-    .inicioContactoContainer {
-        height: 350px;
-    }
-
-    .inicioContactoContainer .info {
-        padding: 30px 10px;
-    }
-
-    .inicioContactoContainer .info h2{
-        font-size: 30px;
-    }
-
-    .inicioContactoContainer .info p{
-        font-size: 16px;
-    }
-
-    .inicioContactoContainer .info a{
-        width: 100%;
-    }
-
-    .inicioContactoContainer .info a button{
-        width: 100%;
-    }
-
-    .inicioContactoContainer .logo{
-        display: none;
-    }
-
+  .carousel-item img {
+    max-height: 50px;
+  }
 }

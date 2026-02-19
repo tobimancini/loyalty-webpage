@@ -1,76 +1,81 @@
-.serviciosContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 7%;
-    margin-bottom: 50px;
+/* ========================================
+   SERVICES PAGE
+   ======================================== */
+.services-page {
+  padding: 0 var(--section-px) var(--section-py);
 }
 
-.servicioContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 50px;
+.services-page__intro {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 640px;
+  margin-bottom: var(--space-3xl);
 }
 
-.servicioContainer svg {
-    height: 70px;
-    color: #63bbea;
+/* ========================================
+   SERVICE CARDS — Full Width
+   ======================================== */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
 }
 
-.servicioContainer p svg {
-    height: 10px;
-    margin-right: 10px;
+.service-card-full {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl);
+  background-color: var(--color-text-inverse);
+  border: 1px solid var(--color-bg-alt);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
-
-.servicioContainer p {
-    margin-right: 150px;
+.service-card-full:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-left-color: var(--color-primary);
 }
 
-.servicioContainer p span {
-    /* margin-bottom: 30px; */
-    color: #1f2d55;
-    font-size: 22px;
-    font-weight: 600;
+.service-card-full__icon {
+  flex-shrink: 0;
 }
 
-.servicioContainer .text {
-    margin-bottom: 30px;
+.service-card-full__title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.3;
 }
 
-/* Estilos para tabletas y laptops pequeños */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .serviciosContainer{
-        padding: 0 4%;
-    }
-    .servicioContainer .text{
-        margin-right: 70px;
-    }
-
-    .servicioContainer svg{
-        height: 60px;
-    }
+.service-card-full__text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  max-width: 600px;
 }
 
-/*Estilos para celulares*/
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-    .serviciosContainer{
-        padding: 0 10px;
-    }
+  .service-card-full {
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+  }
 
-    .servicioContainer .text{
-        margin-right: 5px;
-    }
-
-    .servicioContainer svg{
-        height: 50px;
-    }
-
-    .servicioContainer p span{
-        font-size: 18px;
-    }
+  .service-card-full__title {
+    font-size: 19px;
+  }
 }
-

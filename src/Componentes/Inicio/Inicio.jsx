@@ -1,189 +1,189 @@
-import React, { useEffect, useRef, useState } from 'react'
-
-import Background from '../Background/Background'
-import './Inicio.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBalanceScale, faBusinessTime, faChartLine, faCoins, faDotCircle, faGlobe, faHandshake, faPause, faPeopleGroup, faPlay, faShield, faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faBalanceScale, faChartLine, faChartPie, faChevronDown,
+  faCoins, faGlobe, faHandshake, faShield, faArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
+import Background from '../Background/Background';
+import ScrollReveal from '../UI/ScrollReveal';
+import SectionHeader from '../UI/SectionHeader';
+import StatsBar from '../UI/StatsBar';
+import VideoModal from '../UI/VideoModal';
+import CTASection from '../UI/CTASection';
+import './Inicio.css';
 
+const logos = [
+  { src: 'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/latin.png', alt: 'Latinex', h: 70 },
+  { src: 'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/ieb.png', alt: 'IEB', h: 120 },
+  { src: 'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/inviu.png', alt: 'InviU', h: 55 },
+  { src: 'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/pershing.png', alt: 'Pershing', h: 60 },
+  { src: 'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/interactive.png', alt: 'Interactive Brokers', h: 50 },
+];
+
+const philosophy = [
+  {
+    icon: faBalanceScale,
+    title: 'Independencia',
+    headline: 'No respondemos a bancos. Respondemos a vos.',
+    text: 'Sin conflictos de interés, tus objetivos son los únicos que importan.',
+  },
+  {
+    icon: faHandshake,
+    title: 'Confianza',
+    headline: 'Relaciones que trascienden generaciones.',
+    text: '20+ años construyendo vínculos basados en transparencia y resultados.',
+  },
+  {
+    icon: faGlobe,
+    title: 'Excelencia',
+    headline: 'Acceso global, enfoque personal.',
+    text: 'Mercados internacionales con la cercanía de un equipo dedicado.',
+  },
+];
+
+const services = [
+  { icon: faChartLine, title: 'Banca Privada', text: 'Gestión integral de ahorros, Real Estate y portafolios.' },
+  { icon: faChartPie, title: 'Asesoramiento Financiero', text: 'Planificación personalizada para tus metas a largo plazo.' },
+  { icon: faShield, title: 'Protección de Capital', text: 'Soluciones para optimizar recursos y minimizar riesgos.' },
+  { icon: faCoins, title: 'Optimización Fiscal', text: 'Estrategias para reducir tu carga impositiva.' },
+];
 
 const Inicio = () => {
-  const videoRef = useRef(null);
-  const [carouselPlay, setCarouselPlay] = useState(true);
-  const [videoPlay, setVideoPlay] = useState(true);
-  const [videoMute, setVideoMute] = useState(true);
-  const [titleVisible, setTitleVisible] = useState(false)
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
-
-
-
-  const toggleVideoPlayback = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setVideoPlay(true);
-    } else {
-      videoRef.current.pause();
-      setVideoPlay(false);
-    }
-  };
-
-  const logos = [
-    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/latin.png',
-    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/ieb.png',
-    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/inviu.png',
-    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/pershing.png',
-    'https://loyalty-optimized.s3.sa-east-1.amazonaws.com/interactive.png'
-  ];
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setViewportWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    if (video) {
-      const handleTimeUpdate = () => {
-        if (video.currentTime >= 4) {
-          setTitleVisible(true);
-        }
-      };
-
-      video.addEventListener('timeupdate', handleTimeUpdate);
-
-      return () => {
-        video.removeEventListener('timeupdate', handleTimeUpdate);
-      };
-    }
-  }, []);
+  const allLogos = [...logos, ...logos, ...logos];
 
   return (
     <Background>
-      <div className='container inicioContainer'>
+      <Helmet>
+        <title>Loyalty Investments | Asesoramiento Financiero Independiente</title>
+        <meta name="description" content="Asesoramiento financiero independiente con más de 20 años de trayectoria. Banca privada, gestión de activos y optimización fiscal para individuos y empresas en Argentina." />
+        <link rel="canonical" href="https://loyalty.investments/" />
+        <meta property="og:title" content="Loyalty Investments | Asesoramiento Financiero Independiente" />
+        <meta property="og:description" content="Más de 20 años protegiendo y gestionando activos. Banca privada, gestión de portafolios y optimización fiscal." />
+        <meta property="og:url" content="https://loyalty.investments/" />
+      </Helmet>
+      <div className="container inicioContainer">
 
-        <div className='heroContainer '>
-          <video ref={videoRef} autoPlay muted={videoMute} loop disablePictureInPicture playsInline>
-            <source src="https://loyalty-optimized.s3.sa-east-1.amazonaws.com/LoyaltyOpt.mp4" type="video/mp4" ></source>
-          </video>
-          <div className='heroTextContainer'>
-            <h1 className={titleVisible && viewportWidth < 768 ? 'titleFadeIn' : ''} >Loyalty Investments</h1>
-            <p>Asesoramiento Financiero Independiente</p>
-            <p>Protegiendo y gestionando tus activos con confianza, protección y credibilidad</p>
-            <Link to='/contacto' ><button>Contactanos</button></Link>
+        {/* ===== 1. HERO — Statement puro ===== */}
+        <section className="home-hero">
+          <div className="home-hero__content">
+            <p className="home-hero__label">Asesoramiento Financiero Independiente</p>
+            <h1 className="home-hero__title">
+              Más de dos décadas<br />
+              construyendo confianza<br />
+              financiera.
+            </h1>
+            <Link to="/contacto" className="btn btn-secondary home-hero__btn">
+              Contactanos
+            </Link>
           </div>
-          <div className='videoBtns'>
-            {
-              videoPlay ?
-                <FontAwesomeIcon icon={faPause} onClick={toggleVideoPlayback} />
-                :
-                <FontAwesomeIcon icon={faPlay} onClick={toggleVideoPlayback} />
-            }
-            {
-              videoMute ?
-                <FontAwesomeIcon icon={faVolumeMute} onClick={() => setVideoMute(!videoMute)} />
-                :
-                <FontAwesomeIcon icon={faVolumeUp} onClick={() => setVideoMute(!videoMute)} />
-            }
+          <div className="scroll-indicator" aria-hidden="true">
+            <FontAwesomeIcon icon={faChevronDown} />
           </div>
-        </div>
+        </section>
 
-        <div className='alianzasContainer'>
-          <h2>Alianzas Estrategicas</h2>
-          <div className='carouselContainer'>
-            <div className="carousel">
-              <ul onMouseLeave={() => setCarouselPlay(true)} onMouseEnter={() => setCarouselPlay(false)} className="logoList" style={{ animationPlayState: carouselPlay ? 'running' : 'paused' }} >
-                {logos.map((logo, index) => (
-                  <li key={index} className="brandContainer">
-                    <img className={`logo${index}`} src={logo} alt={`Logo ${index + 1}`} />
-                  </li>
-                ))}
-              </ul>
+        {/* ===== 2. STATS BAR ===== */}
+        <StatsBar />
+
+        {/* ===== 3. NUESTRA HISTORIA — Video como estrella ===== */}
+        <section className="story-section">
+          <div className="story-text">
+            <ScrollReveal>
+              <span className="section-label">Nuestra Historia</span>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <h2 className="story-text__title">
+                Conocé quiénes somos y por qué hacemos lo que hacemos.
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="story-text__body">
+                Desde 2004, Loyalty nació de una idea clara: poner siempre al cliente en primer lugar.
+                Nuestro modelo independiente nos permite ofrecerte un asesoramiento libre de conflictos
+                de interés, con el único objetivo de proteger y hacer crecer tu patrimonio.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={300}>
+              <Link to="/quienesSomos" className="story-text__link">
+                Conocé más sobre nosotros <FontAwesomeIcon icon={faArrowRight} />
+              </Link>
+            </ScrollReveal>
+          </div>
+          <ScrollReveal delay={200} variant="fadeLeft">
+            <VideoModal
+              videoSrc="https://loyalty-optimized.s3.sa-east-1.amazonaws.com/LoyaltyOpt.mp4"
+            />
+          </ScrollReveal>
+        </section>
+
+        {/* ===== 4. FILOSOFÍA — 3 Pilares ===== */}
+        <section className="philosophy-section">
+          <SectionHeader label="Nuestra Filosofía" title="En qué creemos" centered />
+          <div className="philosophy-grid">
+            {philosophy.map((item, i) => (
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="philosophy-card">
+                  <div className="icon-circle">
+                    <FontAwesomeIcon icon={item.icon} />
+                  </div>
+                  <h3 className="philosophy-card__title">{item.title}</h3>
+                  <p className="philosophy-card__headline">{item.headline}</p>
+                  <p className="philosophy-card__text">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ===== 5. SERVICIOS — Preview ===== */}
+        <section className="home-services">
+          <SectionHeader label="Soluciones" title="Servicios a tu medida" />
+          <div className="services-grid">
+            {services.map((service, i) => (
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className="service-card">
+                  <div className="icon-circle">
+                    <FontAwesomeIcon icon={service.icon} />
+                  </div>
+                  <div>
+                    <h3 className="service-card__title">{service.title}</h3>
+                    <p className="service-card__text">{service.text}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal>
+            <div className="home-services__link-wrapper">
+              <Link to="/servicios" className="btn btn-outline">
+                Conocé todos nuestros servicios
+              </Link>
+            </div>
+          </ScrollReveal>
+        </section>
+
+        {/* ===== 6. ALIANZAS ===== */}
+        <section className="alianzas-section">
+          <ScrollReveal>
+            <span className="section-label">Alianzas Estratégicas</span>
+          </ScrollReveal>
+          <div className="carousel-wrapper">
+            <div className="carousel-track">
+              {allLogos.map((logo, i) => (
+                <div key={i} className="carousel-item">
+                  <img src={logo.src} alt={logo.alt} style={{ height: logo.h * 0.8 }} loading="lazy" />
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className='resumenContainer'>
-          <h3>TRAYECTORIA</h3>
-          <h2>Más de 20 Años a Tu Lado</h2>
-          <p><FontAwesomeIcon icon={faDotCircle} />Con más de 20 años de experiencia, Loyalty ofrece asesoramiento financiero independiente,
-            especializado en banca privada y gestión de activos para individuos y empresas. Nuestro enfoque se basa en la confianza,
-            la protección y la credibilidad.</p>
-          <div className='icons column'>
-            <Link to='/quienesSomos'><button>Conoce más sobre nosotros</button></Link>
-            <div className='icons'>
-              <FontAwesomeIcon icon={faPeopleGroup} />
-              <FontAwesomeIcon icon={faBusinessTime} />
-              <FontAwesomeIcon icon={faHandshake} />
-            </div>
-          </div>
-        </div>
-
-        <div className='resumenContainer servicios'>
-          <h3>ASESORAMIENTO, PROTECCIÓN Y OPTIMIZACIÓN</h3>
-          <h2>Tu Futuro Financiero</h2>
-          <p><FontAwesomeIcon icon={faDotCircle} />Ofrecemos asesoramiento financiero personalizado para ayudarte a alcanzar tus metas a largo plazo. Desde la planificación de inversiones hasta la estrategia de jubilación, estamos aquí para guiarte en cada paso.</p>
-          <p><FontAwesomeIcon icon={faDotCircle} />Brindamos soluciones integrales para la gestión y protección del capital empresarial. Optimiza tus recursos, asegura tu flujo de caja y minimiza los riesgos financieros con nuestro apoyo experto.</p>
-          <p><FontAwesomeIcon icon={faDotCircle} />Desarrollamos estrategias para la optimización fiscal que te permiten reducir tu carga impositiva y mejorar tu rentabilidad. Aprovecha al máximo tus recursos con nuestras soluciones a medida.</p>
-
-          <div className='icons column'>
-            <Link to='/servicios'><button>Conoce más sobre nuestros servicios</button></Link>
-            <div className='icons'>
-              <FontAwesomeIcon icon={faChartLine} />
-              <FontAwesomeIcon icon={faShield} />
-              <FontAwesomeIcon icon={faCoins} />
-            </div>
-          </div>
-
-        </div>
-
-        <div className='resumenContainer'>
-          <h3>INDEPENDENCIA</h3>
-          <h2>Tu Interés, Nuestra Prioridad</h2>
-          <p>
-            <FontAwesomeIcon icon={faDotCircle} /> Nuestro modelo de negocio independiente garantiza que nuestros intereses estén completamente alineados con los de nuestros clientes, asegurando decisiones objetivas y beneficiosas para ti.
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faDotCircle} /> No pertenecemos a bancos ni a sociedades de bolsa, lo que nos permite ofrecerte soluciones imparciales y ajustadas a tus necesidades específicas.
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faDotCircle} /> Alineamos nuestros objetivos con los tuyos, brindando un servicio personalizado y centrado en maximizar tus resultados financieros.
-          </p>
-
-          <div className='icons column'>
-            <Link to='/comoTrabajamos'><button>Descubre cómo trabajamos</button></Link>
-            <div className='icons'>
-              <FontAwesomeIcon icon={faHandshake} />
-              <FontAwesomeIcon icon={faBalanceScale} />
-              <FontAwesomeIcon icon={faGlobe} />
-            </div>
-          </div>
-
-        </div>
-
-        <div className='inicioContactoContainer'>
-          <div className='info'>
-            <h2>Da el Primer Paso</h2>
-            <p>Tu tranquilidad financiera empieza aquí. Permítenos ayudarte a proteger y crecer tu patrimonio con el respaldo de nuestros expertos.</p>
-            <Link to='/contacto'><button>Contactanos Ahora</button></Link>
-          </div>
-          <div className='logo'>
-            <img src="https://loyalty-optimized.s3.sa-east-1.amazonaws.com/simbolo3.png" alt="simbolo vertical" />
-          </div>
-        </div>
+        {/* ===== 7. CTA ===== */}
+        <CTASection />
 
       </div>
-    </Background >
-  )
-}
+    </Background>
+  );
+};
 
-export default Inicio
+export default Inicio;

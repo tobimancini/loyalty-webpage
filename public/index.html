@@ -1,24 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Google Analytics 4 -->
+    <!-- INSTRUCCIONES: Reemplazar G-XXXXXXXXXX con el Measurement ID real de GA4 -->
+    <!-- Para obtenerlo: analytics.google.com > Admin > Data Streams > Web > Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <link rel="icon" href="%PUBLIC_URL%/logoshow.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0f1b3d" />
     <meta
       name="description"
-      content="Loyalty Investments - Somos una empresa de asesoramiento financiero independiente con una trayectoria de
-      más de 20 años."
+      content="Loyalty Investments — Asesoramiento financiero independiente con más de 20 años de trayectoria. Banca privada, gestión de activos y optimización fiscal para individuos y empresas."
     />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://loyalty.investments/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Loyalty Investments" />
+    <meta property="og:title" content="Loyalty Investments | Asesoramiento Financiero Independiente" />
+    <meta property="og:description" content="Más de 20 años protegiendo y gestionando activos. Banca privada, gestión de portafolios y optimización fiscal." />
+    <meta property="og:image" content="https://loyalty-optimized.s3.sa-east-1.amazonaws.com/logoCompBlanco.png" />
+    <meta property="og:url" content="https://loyalty.investments/" />
+    <meta property="og:locale" content="es_AR" />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logoshow.png" />
-    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <title>Loyalty</title>
+
+    <title>Loyalty Investments | Asesoramiento Financiero Independiente</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Loyalty Investments",
+      "description": "Asesoramiento financiero independiente con más de 20 años de trayectoria. Banca privada, gestión de activos y optimización fiscal.",
+      "url": "https://loyalty.investments",
+      "logo": "https://loyalty-optimized.s3.sa-east-1.amazonaws.com/logoCompBlanco.png",
+      "image": "https://loyalty-optimized.s3.sa-east-1.amazonaws.com/logoCompBlanco.png",
+      "telephone": "+54-11-3987-5923",
+      "email": "info@linv.com.ar",
+      "foundingDate": "2004",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. del Libertador 6810, Piso 14",
+        "addressLocality": "Buenos Aires",
+        "addressRegion": "CABA",
+        "postalCode": "C1429",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.5468,
+        "longitude": -58.4241
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/loyalty.investments",
+        "https://ar.linkedin.com/company/loyalty-investments"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Argentina"
+      },
+      "serviceType": [
+        "Banca Privada",
+        "Asesoramiento Financiero",
+        "Gestión de Capital",
+        "Optimización Fiscal"
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Necesitás habilitar JavaScript para usar esta aplicación.</noscript>
     <div id="root"></div>
-    
   </body>
 </html>

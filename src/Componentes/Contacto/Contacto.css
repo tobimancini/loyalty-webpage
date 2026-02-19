@@ -1,140 +1,164 @@
-.contactInfo{
-    padding: 0px 7%;
+/* ========================================
+   CONTACT INTRO
+   ======================================== */
+.contact-intro {
+  padding: 0 var(--section-px) var(--space-3xl);
 }
 
-.infoItem{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 10px 0;
-    font-style: oblique;
-    color: rgb(62, 62, 62);
+.contact-intro__text {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 580px;
 }
 
-.infoItem svg{
-    margin-right: 10px;
-    color: #63bbea;
+/* ========================================
+   CONTACT LAYOUT
+   ======================================== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  padding: 0 var(--section-px) var(--section-py);
+  align-items: start;
 }
 
-.formContainer{
-    padding: 50px 7%;
-    width: 100%;
-    margin: 50px 0;
-    background-image: url(https://loyalty-optimized.s3.sa-east-1.amazonaws.com/bgBlue.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/* ========================================
+   CONTACT INFO
+   ======================================== */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
-.formContainer h3{
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 20px;
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
-
-.formContainer button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 10px;
-    background-color: #0606069c;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    margin: 30px 0;
-    border: solid 1px #fff;
-    cursor: pointer;
+a.contact-item:hover {
+  background-color: var(--color-bg-alt);
 }
 
-.formContainer button svg{
-    height: 25px;
-    margin-left: 15px;
+.contact-item__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-accent-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--duration-normal) var(--ease-out);
 }
 
-.formContainer button:hover {
-    background-color: #282525ad;
+.contact-item__icon svg {
+  color: var(--color-accent);
+  width: 18px;
+  height: 18px;
 }
 
-.formGroup{
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
+a.contact-item:hover .contact-item__icon {
+  background-color: var(--color-accent);
 }
 
-.formGroup label{
-    color: #ffffff;
+a.contact-item:hover .contact-item__icon svg {
+  color: var(--color-text-inverse);
 }
 
-.formContainer input{
-    width: 300px;
-    padding: 10px 15px;
+.contact-item__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
-.formContainer textarea{
-    width: 600px;
-    padding: 10px 15px;
-
+.contact-item__label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-light);
 }
 
-.mapContainer h3{
-    color: #1f2d55;
-    font-size: 22px;
-    font-weight: 600;
-    padding: 20px 7%;
+.contact-item__value {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
 }
 
-/* Estilos para tabletas y laptops pequeños */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .contactInfo{
-        padding: 0 4%;
-    }
-
-    .formContainer{
-        padding:  50px 4%;
-    }
-
-    .mapContainer h3{
-        padding: 20px 4%;
-    }
+/* ========================================
+   WHATSAPP CTA
+   ======================================== */
+.contact-whatsapp {
+  margin-top: var(--space-xl);
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-md);
 }
 
-/*Estilos para celulares*/
+.contact-whatsapp__title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-lg);
+}
+
+/* ========================================
+   MAP
+   ======================================== */
+.contact-map-wrapper {
+  height: 100%;
+}
+
+.contact-map {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-map iframe {
+  display: block;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-    .contactInfo{
-        padding: 0 10px;
-    }
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
 
-    .contactInfo .infoItem p{
-        font-size: 14px;
-    }
+  .contact-item {
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
 
-    .formContainer{
-        padding: 30px 10px;
-    }
+  .contact-item__icon {
+    width: 44px;
+    height: 44px;
+  }
 
-    .formContainer h3{
-        font-size: 18px;
-    }
+  .contact-map {
+    min-height: 300px;
+  }
 
-    .formContainer input{
-        padding: 7px 10px;
-        width: 100%;
-    }
-
-    .formContainer textarea{
-        width: 100%;
-    }
-
-    .formContainer button{
-        width: 100%;
-        padding: 7px 10px;
-    }
-
-    .mapContainer h3{
-        font-size: 18px;
-    }
+  .contact-whatsapp {
+    padding: var(--space-xl);
+  }
 }

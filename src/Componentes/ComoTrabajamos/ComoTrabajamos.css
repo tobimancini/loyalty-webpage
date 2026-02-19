@@ -1,56 +1,161 @@
-.serviciosContainer.comoTrabajamos{
-    flex-direction: row;
-    justify-content: space-between;
+/* ========================================
+   PROCESS INTRO
+   ======================================== */
+.process-intro {
+  padding: 0 var(--section-px) var(--space-3xl);
 }
 
-.comoTrabajamosImg{
-    background-image: url(https://loyalty-optimized.s3.sa-east-1.amazonaws.com/trabajando.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 86%;
-    height: 400px;
-    margin: 0 7% 100px 7%;
-    position: relative;
+.process-intro__text {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 640px;
 }
 
-.logoInImg{
-    height: auto;
-    width: 100px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+/* ========================================
+   TIMELINE
+   ======================================== */
+.timeline {
+  padding: 0 var(--section-px) var(--section-py);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-
-/* Estilos para tabletas y laptops pequeños */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .comoTrabajamosImg{
-        margin: 0 4% 70px 4%;
-    }
-    .comoTrabajamos{
-        margin-bottom: 20px;
-    }
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-xl);
+  position: relative;
 }
 
-/*Estilos para celulares*/
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.timeline-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  background-color: var(--color-accent);
+  opacity: 0.3;
+  min-height: 40px;
+}
+
+.timeline-content {
+  padding-bottom: var(--space-2xl);
+}
+
+.timeline-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  padding-top: var(--space-sm);
+}
+
+.timeline-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ========================================
+   ADVANTAGES
+   ======================================== */
+.advantages-section {
+  background-color: var(--color-bg-alt);
+}
+
+.advantages-section .section-header {
+  padding-bottom: var(--space-lg);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  padding: 0 var(--section-px) var(--section-py);
+}
+
+.advantage-card {
+  background-color: var(--color-text-inverse);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.advantage-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.advantage-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.advantage-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-    .comoTrabajamosImg{
-        margin: 0;
-        height: 300px;
-        width: 100%;
-    }
+  .timeline {
+    padding: 0 var(--section-px) var(--space-3xl);
+  }
 
-    .comoTrabajamosImg img{
-        width: 60px;
-    }
+  .timeline-item {
+    gap: var(--space-md);
+  }
 
-    .comoTrabajamos{
-        flex-direction: column !important;
-    }
+  .timeline-number {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
 
-    .comoTrabajamos .servicioContainer{
-        margin-bottom: 30px;
-    }
-
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
 }

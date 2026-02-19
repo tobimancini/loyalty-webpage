@@ -1,147 +1,240 @@
+/* ========================================
+   HEADER / NAVBAR
+   ======================================== */
 .headerContainer {
-    position: relative;
-    top: 0;
-    padding: 0 7%;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1f2d55;
-    /* overflow: hidden; */
-    z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 var(--section-px);
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1000;
+  transition: background-color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out),
+              backdrop-filter var(--duration-normal) var(--ease-out);
+}
+
+.headerScrolled {
+  background-color: rgba(15, 27, 61, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.headerLogoLink {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.headerLogoLink:hover {
+  transform: scale(1.03);
 }
 
 .headerLogo {
-    width: 135px;
-    z-index: 10000;
+  width: 140px;
+  height: auto;
 }
 
+/* ========================================
+   DESKTOP NAV LINKS
+   ======================================== */
 .navLinks {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
 }
 
 .navItem {
-    padding: 0 15px;
-    height: 99%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #171717;
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-    letter-spacing: -0.5px;
-    transition: all ease-in-out 50ms;
+  position: relative;
+  padding: 0 var(--space-md);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-text-inverse);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
-.navItem:hover {
-    border-bottom: solid 3.5px #fff;
+.navItem::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform: translateX(-50%);
+  transition: width var(--duration-normal) var(--ease-out);
 }
 
-.hamburgerContainer{
-    height: 30px;
-    width: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.navItem:hover::after {
+  width: 70%;
 }
 
-.line{
-    height: 2px;
-    width: 80%;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: 3px 0;
+.navItem--active {
+  font-weight: 600;
 }
 
-.hamburgerBox {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.navItem--active::after {
+  width: 70%;
+  background-color: var(--color-text-inverse);
 }
 
-.navbarHamburger {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 10px 20px 0;
-    opacity: 0;
-    top: 0;
-    right: 0;
-    width: 200px;
-    border-radius: 0 0 0 10px;
-    transform: translate3d(200px, 60px, 0);
-    background-color: #050a1d;
-    animation-duration: 200ms;
-    animation-fill-mode: forwards;
+/* Nav CTA button */
+.nav-cta {
+  margin-left: var(--space-md);
+  padding: 8px 24px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: var(--color-text-inverse);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--ease-out);
 }
 
-.navbarHamburger .navItem{
-    margin: 10px 0;
+.nav-cta:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
-.navbarHamburger .navItem:hover{
-    border: none;
+/* ========================================
+   HAMBURGER BUTTON (Mobile)
+   ======================================== */
+.hamburger-btn {
+  position: relative;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-@keyframes hamburger {
-    0% {
-        opacity: 0;
-        transform: translate3d(200px, 60px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0px, 60px, 0);
-    }
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-inverse);
+  border-radius: 2px;
+  transition: all var(--duration-normal) var(--ease-out);
+  transform-origin: center;
 }
 
-@keyframes hamburgerOut {
-    0% {
-        opacity: 1;
-        transform: translate3d(0px, 60px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(200px, 60px, 0);
-    }
+/* X animation */
+.hamburger-btn--open .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
+.hamburger-btn--open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-btn--open .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========================================
+   MOBILE OVERLAY
+   ======================================== */
+.hamburger-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 999;
+  pointer-events: none;
+  transition: background-color var(--duration-normal) var(--ease-out);
+}
+
+.hamburger-overlay--visible {
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
+/* ========================================
+   MOBILE PANEL
+   ======================================== */
+.hamburger-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  height: 100dvh;
+  background-color: var(--color-surface-dark);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 var(--space-2xl);
+  transform: translateX(100%);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.hamburger-panel--open {
+  transform: translateX(0);
+}
+
+.hamburger-link {
+  display: block;
+  color: var(--color-text-inverse);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  padding: var(--space-md) 0;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hamburger-panel--open .hamburger-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hamburger-link:hover {
+  color: var(--color-accent);
+}
+
+.hamburger-link--active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 1024px) {
-    .navItem {
-        padding: 0 7px;
-        margin: 0 3px 0 3px;
-        font-size: 16px;
-    }
-}
-
-/* Estilos para tabletas y laptops pequeños */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .headerContainer{
-        padding: 0 4%;
-    }
-}
-
-/*Estilos para celulares*/
-@media (max-width: 768px) {
-    .headerContainer{
-        padding: 0 10px;
-    }
+  .navItem {
+    padding: 0 var(--space-sm);
+    font-size: 13px;
+  }
 }
